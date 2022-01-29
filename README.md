@@ -26,7 +26,7 @@ npm
 
 ```shell
 # in './CV-Game-backend'
-&& npm inatll
+npm inatll
 
 # in './CV-Game-frontend'
 npm install
