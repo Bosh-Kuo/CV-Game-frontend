@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# wp1101-final project: Computer Vision Game Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### *Frontend repo* : https://github.com/Bosh-Kuo/CV-Game-frontend  
+### *Backend repo* : https://github.com/Bosh-Kuo/CV-Game-backend
+### *demo* : https://wp1101-final-cvgame.netlify.app
+(後端架在heroku, 前端架在netlify)
+> 由於HTTPS是基於SSL依靠證書來驗證伺服器的身份，並為瀏覽器和伺服器之間的通訊加密，所以在HTTPS站點呼叫某些非SSL驗證的資源時瀏覽器可能會阻止，比如使用ws://***呼叫websocket伺服器或者引入類似http://***.js的js檔案等都會報錯，`目前臨時解法是用chrome瀏覽器點擊網址旁邊的鎖頭，接著點網站設定，將不安全的內容：封鎖（預設）改為允許，就可以使用了`
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+- Clone this repo first
 
-### `npm start`
+- Install frontend & backend packages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```shell
+# in './CV-Game-backend'
+yarn
 
-### `npm test`
+# in './CV-Game-frontend'
+yarn
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm
 
-### `npm run build`
+```shell
+# in './CV-Game-backend'
+&& npm inatll
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# in './CV-Game-frontend'
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Run in localhost
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Open two terminal windows
+2. Go to './Playground/backend' and copy the `.env.defaults` file to `.env` file
+3. Fill in the MONGO_URL in the `.env` file with your [MongoDB](https://www.mongodb.com) url and set SALT_ROUNDS
 
-### `npm run eject`
+```
+#.env
+MONGO_URL= (your mongo url)
+SALT_ROUNDS= (you can set SALT_ROUNDS=10)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Go to './CV-Game-backend'
+5. In one window run this script to start your backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+or
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm run dev
+```
+6. Go to './CV-Game-frontend'
+7. In the other window run this script to start your frontend
 
-## Learn More
+```
+yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+or
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start
+```
 
-### Code Splitting
+8. Make sure your backend connect to your [MongoDB](https://www.mongodb.com)
+9. Open http://localhost:3000 with your browser and you should be able to start plaing our games!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Test
 
-### Analyzing the Bundle Size
+- Sign Up / Sign In 功能正常
+- 可正常從 Lobby 進入各個遊戲
+- 可正常從左側 DashBoard 進入遊戲以及 LeaderBoard
+- 各個遊戲可以合理的判斷手勢與姿勢
+- 分數與時間計算無誤且反應於 LeaderBoard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Teamwork
 
-### Making a Progressive Web App
+郭柏志：
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 前端整體畫面 Layout 的 UI/UX 設計
+- Sign In, Sign Up Page 功能與畫面設計
+- Game Page 架構與畫面設計
+- Pose Flappy Bird Game 遊戲開發
+- 各頁面的 Routes 安排與 path 處理
 
-### Advanced Configuration
+費聿暄:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Finger Exercise 遊戲開發
+- 後端 graphql 開發與 mongodb 串連
+- 成果部署
 
-### Deployment
+蔡予謙:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Rock-Paper-Scissores Game 遊戲開發
 
-### `npm run build` fails to minify
+## Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [MediaPipe Hands](https://google.github.io/mediapipe/solutions/hands.html)
+- [andypotato/fingerpse](https://github.com/andypotato/fingerpose)
+- [material-ui templates](https://mui.com/zh/getting-started/templates/)
+- [簡易版flappybird](https://github.com/Lucifier129/flappy-bird)
+- [Pose Detection tutorial repo](https://github.com/nicknochnack/PosenetRealtime)
+- [Pose Detection deep learning model](https://github.com/....../tree/master/pose-detection)
+- [Rock Paper Scissors Game](https://github.com/andypotato/rock-paper-scissors)
+- [Fingerpose Libary](https://github.com/andypotato/fingerpose)
