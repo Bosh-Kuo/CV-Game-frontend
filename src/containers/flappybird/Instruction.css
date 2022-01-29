@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+/* .background {
+	position: relative;
+	background-color: #282c34;
+	min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+} */
+
+.title-flappybird {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Luxurious Roman', cursive;
+    /* padding-top: 0px; */
+    margin: 0;
+}
+
+.container-instruction-flappybird {
+	position: relative;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.container-instruction-flappybird .container {
+    border-radius: 8px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 40px;
+    width: 60%;
+    height: auto;
+}
+
+.container-instruction-flappybird .container:hover{
+    border-color: white;
+    font-weight:bold;
+}
+
+.container-instruction-flappybird .container .instruction {
+    color: white;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.image-container-flappybird{
+    display: flex;
+	flex-direction: column;
+    margin-left: 40px;
+}
+
+.image-flappybird{
+    border-radius: 60px;
+    height: 250px;
+    border: 15px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+.btn-container-flappybird {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top:20px;
+}
+
