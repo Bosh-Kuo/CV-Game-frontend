@@ -2,9 +2,38 @@
 
 ### *Frontend repo* : https://github.com/Bosh-Kuo/CV-Game-frontend  
 ### *Backend repo* : https://github.com/Bosh-Kuo/CV-Game-backend
-### *demo* : https://wp1101-final-cvgame.netlify.app
+
 (後端架在heroku, 前端架在netlify)
+
+## Description
+This program is a computer vision web-games website. All three games conbined with **webcam** and **computer vision technology**. We have developed 3 games, namely `Pose Flappy Bird, Finger Exercise, and Rock-Paper-Scissors`.
+
+![Loby](./pic/Loby.png)
+
+![SignIn](./pic/SignIn.png)
+
+<br>
+
+## **demo** : 
+
+`請依照下方gif檔的操作來開啟網站！！`
+
+![demo](./pic/instruction.gif)
+
 > 由於HTTPS是基於SSL依靠證書來驗證伺服器的身份，並為瀏覽器和伺服器之間的通訊加密，所以在HTTPS站點呼叫某些非SSL驗證的資源時瀏覽器可能會阻止，比如使用ws://***呼叫websocket伺服器或者引入類似http://***.js的js檔案等都會報錯，`目前臨時解法是用chrome瀏覽器點擊網址旁邊的鎖頭，接著點網站設定，將不安全的內容：封鎖（預設）改為允許，就可以使用了`
+
+
+### 步驟
+1. 使用google chrome瀏覽器開啟
+2. 點擊網址旁邊的鎖頭
+3. 點網站設定
+4. 將不安全的內容：封鎖（預設）改為允許
+5. 關閉設定頁，回到Computor Vision Game頁面點擊重新載入
+
+
+`demo link:` https://wp1101-final-cvgame.netlify.app
+
+<br>
 
 ## Installation
 
