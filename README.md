@@ -13,9 +13,7 @@ This program is a computer vision web-games website. All three games conbined wi
 
 ## **Demo** : 
 
-**[demo video](https://youtu.be/nbhNhcm_cP8)**
-
-![demo](./pic/instruction.gif)
+If you are interesting to this project, just watch this **[demo video](https://youtu.be/nbhNhcm_cP8)** ! 
 
 
 <br>
